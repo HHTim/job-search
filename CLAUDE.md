@@ -13,9 +13,16 @@
 
 | 用途 | Skill |
 |---|---|
-| 改履歷 | `resume-ats-optimizer`、`resume-bullet-writer`、`resume-quantifier`、`resume-formatter`、`tech-resume-optimizer` |
+| 改履歷 | `resume-ats-optimizer`、`resume-bullet-writer`、`resume-quantifier`、`resume-formatter`、`resume-modern`、`tech-resume-optimizer` |
 | 對職缺客製 | `job-description-analyzer`、`resume-tailor` |
 | 面試準備 | `interview-prep-generator`、`salary-negotiation-prep` |
+
+## Git
+
+本專案已初始化為 git repo，並推送至 GitHub **Private** repo：https://github.com/HHTim/job-search
+
+- 內含真實姓名、聯絡方式、大頭照等個資，**不得**改為 Public。
+- `.gitignore` 已排除 `.DS_Store`、`.gstack/`（工具暫存檔）。
 
 ## 工作慣例
 
