@@ -28,8 +28,12 @@
 
 已安裝 Playwright（裝在 `~/.claude/tools/playwright`，**不在此 repo 內**，避免 node_modules 混進履歷專案），可對 `resume/*.html` 截圖驗證排版與匯出 PDF：
 - 截圖：`node ~/.claude/tools/playwright/screenshot.js <html路徑> <輸出資料夾>`（預設輸出手機 390px、桌面 1100px 兩張）
+- PDF 匯出：`node ~/.claude/tools/playwright/pdf.js <html路徑> <輸出pdf路徑>`
 - 截圖存放於 `test_img/`（驗證用，已加入 `.gitignore`，非專案產出，不進 git 歷史）
 - 改動 rwd.html／ats.html 排版後，應截圖自行檢查，不要只憑程式碼判斷有沒有問題
+- **量測列印高度時，viewport 寬度必須設成 A4 印刷寬度（794px），否則會用瀏覽器預設寬版 viewport 排版，量出來的高度失真**（曾因此誤判溢出頁數）
+- **檢查 PDF 頁數要用 `pdf-lib`（已安裝於同一資料夾）的 `getPageCount()`，不要用 regex 抓 `/Count` 字串**——PDF 檔案裡可能有多個 `/Count` 欄位，抓錯會誤判（曾發生過：土砲方法誤判 1 頁，實際是 2 頁且底部大片空白，靠使用者截圖才抓到）
+- 改完排版後最好直接用 Read 工具開 PDF 本身看渲染結果，比只看 html 截圖更接近使用者最終看到的東西
 
 ## Git
 
