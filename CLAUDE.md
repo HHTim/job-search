@@ -12,7 +12,10 @@
   - **改動 ats.html／rwd.html 的文字後，務必用 grep/diff 跟 onepage.md 核對一致**（無自動化同步機制，曾發生手動編輯造成措辭漂移）
   - 依職缺客製的版本以 `resume/<公司>-<職缺>/` 分資料夾
 - `jd/` — 收集的職缺 JD（一個職缺一個 `.md`，檔名 `<公司>-<職缺>.md`）
-- `interview/` — 面試準備產出（STAR 故事庫、模擬題、公司研究筆記）
+- `interview/` — 面試準備產出：
+  - `STAR-故事庫.md` — 從本人 `resume/黃浩庭-master.md`／`黃浩庭-onepage.md` 展開的 STAR 故事，通用行為面試用
+  - `面試完全準備手冊.md` — 特定職缺（SI／顧問公司，SA+PG+講師複合角色）的技術面試題庫：系統設計（短網址高併發／號段模式／Snowflake）、資料庫正規化、Java 筆試、演算法、Memory Cache、分散式情境；**規則：隨時更新、單一檔案不分拆、上機考題目中英對照**，新面試資訊進來一律用 str_replace 式編輯併入既有章節，不另開新檔
+  - `Session交接報告.md` — 上述手冊的產出脈絡與待辦事項記錄（來自其他 Claude session 的交接文件），供理解手冊章節演進與尚未整併的內容用，非面試素材本身
 - `notes/` — 薪資談判、offer 比較等其他筆記
 
 ## 專案層級 skills（`.claude/skills/`，來源 [Paramchoudhary/ResumeSkills](https://github.com/Paramchoudhary/ResumeSkills)，2026-07-03 安裝、已安全掃描）
