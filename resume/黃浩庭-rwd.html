@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>黃浩庭 Tim Huang — 履歷</title>
+<style>
+  :root {
+    --bg: #eef1ef;
+    --paper: #fbfbf9;
+    --ink: #191f1d;
+    --muted: #59635f;
+    --teal: #235058;
+    --teal-deep: #16363c;
+    --amber: #bd7a2c;
+    --line: #d7dcd8;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0;
+    background:
+      repeating-linear-gradient(0deg, rgba(35,80,88,0.05) 0px, rgba(35,80,88,0.05) 1px, transparent 1px, transparent 28px),
+      repeating-linear-gradient(90deg, rgba(35,80,88,0.05) 0px, rgba(35,80,88,0.05) 1px, transparent 1px, transparent 28px),
+      var(--bg);
+    color: var(--ink);
+    font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", "Segoe UI", sans-serif;
+    padding: clamp(16px, 4vw, 48px) 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* 中英數混排統一走同一套中文字體，避免西文襯線字體(如 Georgia)跟中文字體 baseline 對不齊 */
+  .mono {
+    font-family: "SF Mono", "Consolas", "JetBrains Mono", ui-monospace, "Microsoft JhengHei", monospace;
+  }
+  .sheet {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -30px rgba(20,40,40,0.35);
+    padding: clamp(24px, 5vw, 56px);
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+    border-bottom: 2px solid var(--teal-deep);
+    position: relative;
+  }
+  header::after {
+    content: "SD // SYSTEM DESIGN";
+    position: absolute;
+    right: 0;
+    bottom: -13px;
+    background: var(--paper);
+    padding: 0 6px;
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    color: var(--teal);
+  }
+  .id-block { flex: 1 1 320px; min-width: 240px; }
+  .eyebrow {
+    font-family: "SF Mono","Consolas","JetBrains Mono",ui-monospace,monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.05;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  h1 span { color: var(--teal); font-style: italic; }
+  .role-line {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0 0 14px;
+    max-width: 46ch;
+  }
+  .contact {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px;
+    font-family: "SF Mono","Consolas","JetBrains Mono",ui-monospace,"Microsoft JhengHei",monospace;
+    font-size: 11.5px; color: var(--teal-deep);
+  }
+  .contact span::before { content: "· "; color: var(--amber); }
+  .contact span:first-child::before { content: ""; }
+
+  .photo-wrap {
+    flex: 0 0 auto;
+    width: 100px; aspect-ratio: 3 / 4; height: auto;
+    border: 2px solid var(--teal);
+    padding: 4px;
+    background: var(--paper);
+    box-shadow: 4px 4px 0 rgba(189,122,44,0.28);
+  }
+  .photo-wrap img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 18%; display: block;
+    filter: grayscale(28%) contrast(1.02);
+  }
+
+  /* ---------- Section headers ---------- */
+  section { margin-bottom: 30px; }
+  section:last-child { margin-bottom: 0; }
+  h2 {
+    display: flex; align-items: center; gap: 10px;
+    font-family: "SF Mono","Consolas","JetBrains Mono",ui-monospace,monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal-deep);
+    margin: 0 0 16px;
+  }
+  h2::before {
+    content: "";
+    width: 9px; height: 9px;
+    background: var(--amber);
+    flex-shrink: 0;
+  }
+  h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .summary p {
+    font-size: 13.5px; line-height: 1.75; color: var(--ink); margin: 0;
+    max-width: 68ch;
+  }
+  .summary b, .job li b {
+    font-weight: 700; color: var(--teal-deep);
+    background: rgba(189,122,44,0.14); border-radius: 3px; padding: 0 4px;
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px 28px;
+  }
+  .skill-row {
+    display: flex; align-items: baseline; gap: 10px; font-size: 12.5px; line-height: 1.6;
+    border-bottom: 1px dotted var(--line); padding-bottom: 7px;
+  }
+  .skill-row .k {
+    font-family: "SF Mono","Consolas","JetBrains Mono",ui-monospace,monospace;
+    font-size: 10px; color: var(--amber); letter-spacing: 0.06em;
+    flex: 0 0 84px; padding-top: 2px; text-transform: uppercase;
+  }
+  .skill-row .v { color: var(--ink); }
+
+  /* ---------- Experience timeline ---------- */
+  .timeline { position: relative; padding-left: 22px; }
+  .timeline::before {
+    content: "";
+    position: absolute; left: 4px; top: 6px; bottom: 6px;
+    width: 1.5px; background: var(--line);
+  }
+  .job { position: relative; margin-bottom: 26px; }
+  .job:last-child { margin-bottom: 0; }
+  .job::before {
+    content: "";
+    position: absolute; left: -22px; top: 4px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--paper); border: 2.5px solid var(--teal);
+  }
+  .job-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 4px 14px; margin-bottom: 3px;
+  }
+  .job-head .period { font-variant-numeric: tabular-nums; }
+  .job-head .org { font-size: 15px; font-weight: 700; }
+  .job-head .title { font-size: 12.5px; color: var(--muted); font-weight: 400; }
+  .job-head .period {
+    font-family: "SF Mono","Consolas","JetBrains Mono",ui-monospace,monospace;
+    font-size: 10.5px; color: var(--teal); white-space: nowrap;
+  }
+  .job ul { list-style: none; margin: 8px 0 0; padding: 0; }
+  .job li {
+    position: relative; padding-left: 15px;
+    font-size: 12.5px; line-height: 1.65; color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .job li::before {
+    content: "▸"; position: absolute; left: 0; top: 0;
+    color: var(--amber); font-size: 11px;
+  }
+
+  /* ---------- Footer grid: education / certs / languages ---------- */
+  .foot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+  }
+  .foot-block .t { font-size: 12.5px; font-weight: 700; margin-bottom: 6px; }
+  .foot-block .d { font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .foot-block .d .tag {
+    font-family: "SF Mono","Consolas","JetBrains Mono",ui-monospace,monospace;
+    font-size: 10px; color: var(--teal); margin-right: 4px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 600px) {
+    header { align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    header::after { display: none; }
+    .id-block { min-width: 0; }
+    h1 { font-size: 24px; }
+    .photo-wrap { width: 62px; }
+    .role-line { max-width: none; }
+    .job-head { flex-direction: column; align-items: flex-start; }
+    .timeline { padding-left: 18px; }
+    .job::before { left: -18px; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .sheet { box-shadow: none; border: none; max-width: 100%; padding: 9mm 12mm; }
+    header { margin-bottom: 12px; padding-bottom: 10px; gap: 16px; }
+    header::after { display: none; }
+    .photo-wrap { width: 74px; }
+    h1 { font-size: 22px; margin-bottom: 6px; }
+    .eyebrow { margin-bottom: 4px; }
+    .role-line { font-size: 10.5px; line-height: 1.4; margin-bottom: 6px; }
+    .contact { font-size: 9.5px; }
+    section { margin-bottom: 12px; }
+    h2 { font-size: 10px; margin-bottom: 8px; }
+    .summary p { font-size: 10.5px; line-height: 1.45; }
+    .skills-grid { gap: 5px 20px; }
+    .skill-row { font-size: 10.5px; padding-bottom: 4px; }
+    .job { margin-bottom: 10px; }
+    .job-head .org { font-size: 12.5px; }
+    .job-head .title { font-size: 10.5px; }
+    .job ul { margin-top: 5px; }
+    .job li { font-size: 10px; line-height: 1.38; margin-bottom: 2px; }
+    .foot-grid { gap: 12px; }
+    .foot-block .t { font-size: 11px; margin-bottom: 3px; }
+    .foot-block .d { font-size: 9.5px; line-height: 1.4; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header>
+    <div class="id-block">
+      <p class="eyebrow">RESUME · BACKEND / SYSTEM DESIGN</p>
+      <h1>黃浩庭 <span>Tim Huang</span></h1>
+      <p class="role-line">Java 後端／系統設計（SD）｜主導銀行遺留系統重構與 AI 導入 SDLC｜AWS AIF &amp; CLF 雙認證</p>
+      <div class="contact">
+        <span>hhtonwork@gmail.com</span>
+        <span>0928-005-568</span>
+        <span>新北市</span>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <img src="photo.jpg" alt="黃浩庭" />
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2>Summary</h2>
+    <p><b>3 年</b> Java 後端開發與系統設計經驗，現任職國泰世華銀行擔任 <b>SD（系統設計）</b>角色（另有 <b>5 年</b>航空業跨域歷練）。主導系統架構設計與遺留系統重構，2026 年起主導 AI 工具導入銀行 SDLC。持有 <b>AWS AI Practitioner（AIF-C01）</b>與 <b>Cloud Practitioner（CLF-C02）</b>雙認證。</p>
+  </section>
+
+  <section>
+    <h2>Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="k">Backend</span><span class="v">Java 8／17、Spring Boot、RESTful API</span></div>
+      <div class="skill-row"><span class="k">Database</span><span class="v">PostgreSQL、MySQL、Oracle DB、IBM DB2、Redis</span></div>
+      <div class="skill-row"><span class="k">Frontend</span><span class="v">Angular、Vue.js、JavaScript、HTML／CSS</span></div>
+      <div class="skill-row"><span class="k">Cloud</span><span class="v">GCP（Cloud Run／Cloud SQL）、AWS、Docker、Kubernetes、CI／CD</span></div>
+      <div class="skill-row"><span class="k">AI-Assisted</span><span class="v">Claude Code、GitHub Copilot、OpenClaw</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="timeline">
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="org">國泰世華商業銀行</span> <span class="title">全端工程師（SD／系統設計）</span></div>
+          <div class="period">2024/06 – 至今</div>
+        </div>
+        <ul>
+          <li>重構關鍵批次流程為 Stored Procedure，將處理時間由 4–6 小時縮短至 <b>10–20 分鐘（縮短 95% 以上）</b>，主導新系統資料處理架構設計</li>
+          <li>主導 AI 導入銀行 SDLC 的協作架構設計，建置 OpenClaw 自動化 PR Review／排程 Skill，估算<b>降低約 30% 人力成本</b></li>
+          <li>主導 IBM AS/400 遺留系統模組拆分重構，<b>首次設計多模組共用 BFF 層架構</b>作為 API Gateway 與身分認證層，帶領 2 名工程師開發</li>
+          <li>設計 Token + DB 白名單機制實現跨站 SSO，讓新舊系統於必須並行的 <b>2 年過渡期間</b>零 session 衝突並行運作，完成 Struts2/Vue 到 Angular/Spring Boot 的架構遷移</li>
+          <li>設計並主持兩屆行內 Spring Boot 正式教育訓練課程，<b>訓練 36 名</b>新進工程師／儲備幹部，滿意度<b>約 97 分</b>（估算），學員結訓後皆直接上手專案</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="org">潤新資訊股份有限公司</span> <span class="title">Java 後端工程師</span></div>
+          <div class="period">2023/07 – 2024/06</div>
+        </div>
+        <ul>
+          <li>主導合作金庫個人網銀由 JSP/JSF 重構為<b>前後端分離架構</b>（Angular + Spring Boot），介接 IBM DB2 與銀行電文系統，以 JMeter 壓測定位並優化效能瓶頸</li>
+          <li>將出版社後台系統由 PHP 全面翻寫為 Spring Boot，導入 Redis 快取與 Cloud Storage 儲存策略，建立 <b>Docker → Cloud Run 自動化部署</b></li>
+          <li>開發電商物流中台串接 SiteGiant／Goodmaji／Ragic 三方 API，支援台灣賣家<b>跨境馬來西亞</b>上架與物流追蹤</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="org">長榮航空股份有限公司</span> <span class="title">地勤人員／貨運營業部（助理副課長）</span></div>
+          <div class="period">2017/08 – 2023/02</div>
+        </div>
+        <ul>
+          <li><b>5 年半</b>機場地勤與貨運營業經驗，橫跨旅客服務與艙位／運價協商，奠定高壓環境下跨部門溝通與利害關係人協調能力</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Education / Certs / Languages</h2>
+    <div class="foot-grid">
+      <div class="foot-block">
+        <div class="t">證照</div>
+        <div class="d">
+          <span class="tag">AIF-C01</span>AWS AI Practitioner（2025/10–2028/10）<br/>
+          <span class="tag">CLF-C02</span>AWS Cloud Practitioner（2026/03–2029/03）
+        </div>
+      </div>
+      <div class="foot-block">
+        <div class="t">教育與培訓</div>
+        <div class="d">
+          <span class="tag">2023</span>緯育 TibaMe｜Java 雲端服務開發技術養成班<br/>
+          <span class="tag">2016</span>銘傳大學｜休閒遊憩管理學系 學士
+        </div>
+      </div>
+      <div class="foot-block">
+        <div class="t">語言能力</div>
+        <div class="d">
+          <span class="tag">EN</span>中上（TOEIC 690）<br/>
+          <span class="tag">JP</span>日常會話程度
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
