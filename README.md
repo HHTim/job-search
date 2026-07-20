@@ -10,7 +10,7 @@
 |---|---|---|
 | `resume/` | 履歷原稿與匯出版本 | 有內容（見下） |
 | `jd/` | 收集的職缺 JD，一職缺一個 `.md` | 空，待收集 |
-| `interview/` | STAR 故事庫、技術面試手冊、公司研究筆記 | 有 `STAR-故事庫.md`、`面試完全準備手冊.md`、`Session交接報告.md` |
+| `interview/` | STAR 故事庫、技術面試手冊等面試準備產出 | 有 `STAR-故事庫.md`、`面試完全準備手冊.md`、`Session交接報告.md` |
 | `notes/` | 薪資談判、offer 比較等筆記 | 空，待產出 |
 | `.claude/skills/` | 專案層級 Claude Code skills | 11 個（見下） |
 
@@ -57,7 +57,7 @@
 
 ## Git 慣例
 
-```powershell
+```bash
 git add <檔案>
 git commit -m "說明變更內容"
 git push

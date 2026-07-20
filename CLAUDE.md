@@ -9,7 +9,9 @@
   2. `黃浩庭-onepage.md` — 定稿內容，套用 FAANG 標準（單頁、每職位 3–5 條、XYZ 公式）從 master 篩選而成，**唯一的文字真相來源**，改內容一律先改這裡
   3. `黃浩庭-ats.html` — ATS 投遞版（單欄、無照片、無表格），內容需與 onepage.md 逐字一致
   4. `黃浩庭-rwd.html` — RWD 美化版（含照片、響應式、視覺設計），內容需與 onepage.md 逐字一致
+  - 匯出成品：`Huang_HaoTing_Resume.pdf`（由 ats.html 匯出，實際投遞用）、`黃浩庭-履歷.pdf`（由 rwd.html 匯出，人眼展示／列印用）
   - **改動 ats.html／rwd.html 的文字後，務必用 grep/diff 跟 onepage.md 核對一致**（無自動化同步機制，曾發生手動編輯造成措辭漂移）
+  - **改動 ats.html／rwd.html 後，務必用 Playwright 重新匯出對應 PDF**（見下方「排版驗證」），否則投遞用 PDF 會過期
   - 依職缺客製的版本以 `resume/<公司>-<職缺>/` 分資料夾
 - `jd/` — 收集的職缺 JD（一個職缺一個 `.md`，檔名 `<公司>-<職缺>.md`）
 - `interview/` — 面試準備產出：
