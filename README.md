@@ -50,7 +50,9 @@
 |---|---|---|
 | 改履歷 | `resume-ats-optimizer`、`resume-bullet-writer`、`resume-quantifier`、`resume-formatter`、`resume-modern`、`tech-resume-optimizer` | [Paramchoudhary/ResumeSkills](https://github.com/Paramchoudhary/ResumeSkills)，2026-07-03 安裝、已安全掃描 |
 | 對職缺客製 | `job-description-analyzer`、`resume-tailor` | 同上 |
+| 跨域敘事／求職信 | `career-changer-translator`、`cover-letter-generator` | 同上，2026-08-03 補裝、已安全掃描 |
 | 面試準備 | `interview-prep-generator`、`salary-negotiation-prep` | 同上 |
+| Offer 決策／LinkedIn | `offer-comparison-analyzer`、`linkedin-profile-optimizer` | 同上，2026-08-03 補裝、已安全掃描 |
 | HTML／視覺排版設計 | `frontend-design` | [anthropics/claude-code](https://github.com/anthropics/claude-code) plugins/frontend-design，官方 skill，2026-07-11 安裝、已檢視內容無風險 |
 
 建議流程：JD 進來 → `job-description-analyzer` 算匹配度 → `resume-tailor` 客製 → `resume-ats-optimizer` 健檢 → `interview-prep-generator` 出 STAR 題庫。

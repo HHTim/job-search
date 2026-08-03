@@ -20,13 +20,16 @@
   - `Session交接報告.md` — 上述手冊的產出脈絡與待辦事項記錄（來自其他 Claude session 的交接文件），供理解手冊章節演進與尚未整併的內容用，非面試素材本身
 - `notes/` — 薪資談判、offer 比較等其他筆記
 
-## 專案層級 skills（`.claude/skills/`，來源 [Paramchoudhary/ResumeSkills](https://github.com/Paramchoudhary/ResumeSkills)，2026-07-03 安裝、已安全掃描）
+## 專案層級 skills（`.claude/skills/`，來源 [Paramchoudhary/ResumeSkills](https://github.com/Paramchoudhary/ResumeSkills)，2026-07-03 首批安裝、2026-08-03 補裝 4 個，皆已安全掃描）
 
 | 用途 | Skill |
 |---|---|
 | 改履歷 | `resume-ats-optimizer`、`resume-bullet-writer`、`resume-quantifier`、`resume-formatter`、`resume-modern`、`tech-resume-optimizer` |
 | 對職缺客製 | `job-description-analyzer`、`resume-tailor` |
+| 跨域敘事／求職信 | `career-changer-translator`（跨產業經驗轉譯，投顧問／售前用）、`cover-letter-generator` |
 | 面試準備 | `interview-prep-generator`、`salary-negotiation-prep` |
+| Offer 決策 | `offer-comparison-analyzer`（搭配 120 萬底薪護欄用） |
+| LinkedIn | `linkedin-profile-optimizer`（投外商時再啟用） |
 | HTML／視覺排版設計 | `frontend-design`（來源 [anthropics/claude-code](https://github.com/anthropics/claude-code) plugins/frontend-design，官方 skill，2026-07-11 安裝、內容為純設計指引已檢視無風險） |
 
 ## 排版驗證（Playwright）
