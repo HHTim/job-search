@@ -12,13 +12,13 @@
   - 匯出成品：`Huang_HaoTing_Resume.pdf`（由 ats.html 匯出，實際投遞用）、`黃浩庭-履歷.pdf`（由 rwd.html 匯出，人眼展示／列印用）
   - **改動 ats.html／rwd.html 的文字後，務必用 grep/diff 跟 onepage.md 核對一致**（無自動化同步機制，曾發生手動編輯造成措辭漂移）
   - **改動 ats.html／rwd.html 後，務必用 Playwright 重新匯出對應 PDF**（見下方「排版驗證」），否則投遞用 PDF 會過期
-  - 依職缺客製的版本以 `resume/<公司>-<職缺>/` 分資料夾
-- `jd/` — 收集的職缺 JD（一個職缺一個 `.md`，檔名 `<公司>-<職缺>.md`）
+  - 依職缺客製的版本以 `resume/<公司>-<職缺>/` 分資料夾，內含 `黃浩庭-履歷.md`（客製定稿）＋`Huang_HaoTing_Resume.pdf`（投遞用）。客製流程：從 onepage.md 撈素材依 JD 重排（事實不動、只調順序與措辭）→ `make-pdf generate --no-confidential --no-chapter-breaks --margins 0.6in` 轉 2 頁 PDF → `pdftotext` 驗證抽取。已建：台達電子-AI應用開發工程師、光寶科技-AI數據應用工程師、Yahoo台灣電商-BackendJava（2026-08-05，匹配分析見 `notes/第一波投遞-匹配分析.md`）
+- `jd/` — 收集的職缺 JD（一個職缺一個 `.md`，檔名 `<公司>-<職缺>.md`），每份含來源連結、抓取日期與「初步匹配筆記」。抓 JD 技巧：104 需 `--headed` 過 Cloudflare、公司頁 SPA 會空白改用 `/jobs/search/api/jobs?...&kwop=7` API 或 Google `site:` 索引；LinkedIn 用 guest API（`/jobs-guest/jobs/api/`）免登入
 - `interview/` — 面試準備產出：
   - `STAR-故事庫.md` — 從本人 `resume/黃浩庭-master.md`／`黃浩庭-onepage.md` 展開的 STAR 故事，通用行為面試用
   - `面試完全準備手冊.md` — 特定職缺（SI／顧問公司，SA+PG+講師複合角色）的技術面試題庫：系統設計（短網址高併發／號段模式／Snowflake）、資料庫正規化、Java 筆試、演算法、Memory Cache、分散式情境；**規則：隨時更新、單一檔案不分拆、上機考題目中英對照**，新面試資訊進來一律用 str_replace 式編輯併入既有章節，不另開新檔
   - `Session交接報告.md` — 上述手冊的產出脈絡與待辦事項記錄（來自其他 Claude session 的交接文件），供理解手冊章節演進與尚未整併的內容用，非面試素材本身
-- `notes/` — 薪資談判、offer 比較等其他筆記
+- `notes/` — 求職策略與市場情報：`求職方向定位.md`（廣撒網策略＋120 萬底薪護欄＋104 套用狀態）、`大型科技公司職缺線索.md`（大廠職缺監控清單＋爬蟲備忘，每月重掃）、`第一波投遞-匹配分析.md`（台達 85%／Yahoo 88%／光寶 75%）、`104-個人檔案修改建議.md`；未來放薪資談判、offer 比較
 
 ## 專案層級 skills（`.claude/skills/`，來源 [Paramchoudhary/ResumeSkills](https://github.com/Paramchoudhary/ResumeSkills)，2026-07-03 首批安裝、2026-08-03 補裝 4 個，皆已安全掃描）
 
