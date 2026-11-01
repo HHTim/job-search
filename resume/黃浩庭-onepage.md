@@ -3,15 +3,15 @@
 
 # 黃浩庭 Tim Huang
 
-**Java 後端／系統設計（SD）｜主導銀行遺留系統重構與 AI 導入 SDLC｜AWS AIF & CLF 雙認證**
+**AI 導入 SDLC 專案 Leader（兼 SA、PM）｜主導銀行 AI 開發流程建置與系統架構設計｜AWS AIF & CLF 雙認證**
 
-<hhtonwork@gmail.com> | 0928-005-568 | 新北市
+<clown0715@gmail.com> | 0928-005-568 | 新北市
 
 ---
 
 ## 專業摘要
 
-3 年 Java 後端開發與系統設計經驗，現任職國泰世華銀行擔任 SD（系統設計）角色（另有 5 年航空業跨域歷練）。主導系統架構設計與遺留系統重構，2026 年起主導 AI 工具導入銀行 SDLC。持有 AWS AI Practitioner（AIF-C01）與 Cloud Practitioner（CLF-C02）雙認證。
+3 年 Java 後端開發與系統設計經驗，現任職國泰世華銀行擔任 AI 導入 SDLC 專案 Leader（兼 SA、PM），跨 4 個部門組成團隊，在兩個真實專案上驗證 AI 貫穿需求到測試的完整 SDLC（另有 5 年航空業跨域歷練）。持有 AWS AI Practitioner（AIF-C01）與 Cloud Practitioner（CLF-C02）雙認證。
 
 ---
 
@@ -23,10 +23,10 @@
 
 ## 工作經歷
 
-### 國泰世華商業銀行｜全端工程師（SD／系統設計） | 2024/06 – 至今
+### 國泰世華商業銀行｜全端工程師（AI 導入 SDLC 專案 Leader） | 2024/06 – 至今
 
+- 擔任 IT 營運管理平台 KPI 模組**專案 Leader（兼 SA、PM）**，主導 AI 導入銀行 SDLC，定義「AI 產出、人把關」開發模式，建置 OpenClaw 自動化 Skill，估算縮短整體開發時間約 70～80%（估算）
 - 重構關鍵批次流程為 Stored Procedure，將處理時間由 4–6 小時縮短至 10–20 分鐘（縮短 95% 以上），主導新系統資料處理架構設計
-- 主導 AI 導入銀行 SDLC 的協作架構設計，建置 OpenClaw 自動化 PR Review／排程 Skill，估算降低約 30% 人力成本
 - 主導 IBM AS/400 遺留系統模組拆分重構，首次設計多模組共用 BFF 層架構作為 API Gateway 與身分認證層，帶領 2 名工程師開發
 - 設計 Token + DB 白名單機制實現跨站 SSO，讓新舊系統於必須並行的 2 年過渡期間零 session 衝突並行運作，完成 Struts2/Vue 到 Angular/Spring Boot 的架構遷移
 - 設計並主持兩屆行內 Spring Boot 正式教育訓練課程，訓練 36 名新進工程師／儲備幹部，滿意度約 4.7／5 分（估算），學員結訓後皆直接上手專案
